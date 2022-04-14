@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Noufida</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="data:image/png;base64,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" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- =======================================================
+  * Template Name: iPortfolio - v3.7.0
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="Noufida P.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Noufida</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/P_Noufida" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/noufida.pathoor/" class="facebook"><i class="bx bxl-facebook"></i></a>
+          <a href="https://www.instagram.com/noufida__p/" class="instagram"><i class="bx bxl-instagram"></i></a>          
+          <a href="https://www.linkedin.com/in/noufida-p-baa973237/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Noufida</h1>
+      <p>I'm <span class="typed" data-typed-items="Developer, Designer, Freelancer, Photographer, Traveller "></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p>Currently working as an intern at Brototype,calicut.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="Noufida P.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Full Stack Developer</h3> <br>          
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>8 July 1996</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>GitHub:</strong> <span>https://github.com/noufida</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 9744778771</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kerala, India</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelors</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email id:</strong> <span>noufidap@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>As the part of internship at Brototype, I've designed clones of few websites using HTML, CSS, Javascript, jquery and Bootstrap.</p></div>
+
+        <div class="row no-gutters">
+          
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong><br> Web designs</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="600" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Work</strong> Full time</p>
+            </div>
+          </div>
+        
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>I am proficient in JavaScript, HTML, Bootstrap and CSS. I've keen interest towards python language.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">Bootstrap <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Jquery <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">10%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>Looking for a challenging roll in a reputable organization to utilize my technical and leadership skills for the growth of the organization as well as to enhance my knowledge about new and emerging trends in the IT sector.</p>
+          </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Noufida</h4>
+              <ul>
+                <li>Malappuram, Kerala, India</li>
+                <li>(+91) 9744778771</li>
+                <li>noufidap@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of technology</h4>
+              <h5>2015- 2019</h5>
+              <p><em>Government Engineering college, Thrissur.</em></p>
+              <p>I'm a civil engineering graduate with an overall aggregate of 7.8 .</p></div>            
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Full Stack developer intern</h4>
+              <h5>2022 March - Present</h5>
+              <p><em>Brototype, Calicut </em></p>
+              <ul>
+                <li>Developed basic coding skills in C, Java and done small projects, and grasped Object oriented programming concepts. </li>
+                <li>Designed clones of several websites like Godaddy,Spotify,Zerodha etc... for getting profficiency in responsive web designing using HTML, CSS, Javascript, and Bootstrap.</li>
+                </ul>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Graduated as a civil engineer, I found that it's hard to find a job that meets my interests and payscale. So, I was confused about the progression of my career and finally decided to switch into developing field.</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Growth</li>
+              <li data-filter=".filter-card">Projects</li>              
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/zerodha.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/zerodha.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/godaddy.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/godaddy.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/spotify.png" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/spotify.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="https://png.pngtree.com/png-vector/20190119/ourlarge/pngtree-female-female-engineer-cartoon-cartoon-female-png-image_479046.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="https://png.pngtree.com/png-vector/20190119/ourlarge/pngtree-female-female-engineer-cartoon-cartoon-female-png-image_479046.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="https://thumbs.dreamstime.com/b/young-business-woman-who-puzzled-turning-point-young-business-woman-who-puzzled-turning-point-represents-170439355.jpg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="https://thumbs.dreamstime.com/b/young-business-woman-who-puzzled-turning-point-young-business-woman-who-puzzled-turning-point-represents-170439355.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img style="width:100%" src="https://yt3.ggpht.com/MF_R_v4iUQzpPkrXmv83TXsM1Zu7JZgLX6aE1c7Jcitpg_6KyBVklYShMiDVRnK8-rJ2WnFg=s176-c-k-c0x00ffffff-no-rj-mo" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="https://yt3.ggpht.com/MF_R_v4iUQzpPkrXmv83TXsM1Zu7JZgLX6aE1c7Jcitpg_6KyBVklYShMiDVRnK8-rJ2WnFg=s176-c-k-c0x00ffffff-no-rj-mo" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+               
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/nouf.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="assets/img/nouf.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+               
+              </div>
+            </div>
+          </div>
+
+          
+
+         
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-briefcase"></i></div>
+            <h4 class="title"><a href="">Web Designs</a></h4>
+            <p class="description">Conceptualizing creative ideas with clients.Designing visual imagery for websites and ensuring that they are in line with branding for clients.
+            </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="">Web Developing</a></h4>
+            <p class="description">Developing front end website architecture.Designing user interactions on web pages.Developing back-end website applications.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-bar-chart"></i></div>
+            <h4 class="title"><a href="">Technical Videos</a></h4>
+            <p class="description">Provides quality content videos about tech related topics on my youtube channel 'Noufida P' .</p>
+          </div>        
+                   
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->    
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Feel free to contact me.</p></div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Malappuram, Kerala</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>noufidap@gmailcom</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9744778771</p>
+              </div>
+              
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15665.574552947195!2d75.90197875937884!3d11.009063924006028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b2ad6f830509%3A0x991b93eb94447150!2sKodinhi%2C%20Kerala%2C%20India!5e0!3m2!1sen!2sbg!4v1649870401040!5m2!1sen!2sbg" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form  class="submit-form"  action="" id="submitmsg">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input  name="name" pattern="[a-zA-Z]*" type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              
+              <div class="text-center pt-4 fw-4"><button style="height:55px ;width:170px; background-color:rgb(58, 54, 54); border-radius: 40px;color: #fff;" type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Noufida_p</span></strong>
+      </div>
+     
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    $(".submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbx0ZPTWWHA75SAZqkz14sLAf_Id6tDvsKyYKTWkKaYmN0XehsN4fkA_7NhU6osX7jYLKQ/exec",
+            data:$(".submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+                //window.location.href="https://google.com"
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+</body>
+
+</html>
